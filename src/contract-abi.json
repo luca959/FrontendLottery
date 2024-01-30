@@ -1,0 +1,199 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_data",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "_surname",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_NumOfTickets",
+				"type": "uint256"
+			}
+		],
+		"name": "PersonAdded",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "Extraction",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "GetAllPartecipants",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "date",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "Name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "Surname",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "matricola",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct ChristmasLottery.Ticket[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "GetNumOfPartecipants",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "num",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_surname",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_NumOfTickets",
+				"type": "uint256"
+			}
+		],
+		"name": "SellTicket",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "Winner",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "date",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "Name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "Surname",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "matricola",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct ChristmasLottery.Ticket",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "closeLottery",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getLastTicketSold",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "date",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "Name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "Surname",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "matricola",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct ChristmasLottery.Ticket",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
