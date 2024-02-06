@@ -110,6 +110,11 @@
 			},
 			{
 				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
 				"name": "_NumOfTickets",
 				"type": "uint256"
 			}
@@ -191,6 +196,19 @@
 				"internalType": "struct ChristmasLottery.Ticket",
 				"name": "",
 				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getNumTicketSold",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",

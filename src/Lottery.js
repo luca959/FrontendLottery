@@ -47,6 +47,7 @@ const Lottery = () => {
   const [Winner, setWinner] = useState("");
   const [Close, setCloseLottery] = useState("");
   const [resultExtraction, setStatusExtraction] = useState("");
+  const [IdBuyer, setIdBuyer] = useState("");
 
   //called only once
   useEffect(() => {
@@ -129,6 +130,7 @@ const Lottery = () => {
       walletAddress,
       Name,
       Surname,
+      IdBuyer,
       Ticket
     );
     setStatusTransaction(resultTransaction);
@@ -244,6 +246,20 @@ const Lottery = () => {
               onChange={(e) => setSurname(e.target.value)}
               style={inputStyle}
               placeholder="Surname"
+            />
+          </div>
+          <div style={{ flex: 1, marginRight: "10px" }}>
+            <p>Insert Id Buyer:</p>
+            <input
+              id="idBuyer"
+              type="number"
+              value={IdBuyer}
+              min={1}
+              max={1000}
+              required
+              onChange={(e) => setIdBuyer(e.target.value)}
+              style={inputStyle}
+              placeholder="Id buyer"
             />
           </div>
 

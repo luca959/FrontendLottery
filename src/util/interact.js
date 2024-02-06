@@ -1,7 +1,7 @@
 import Web3 from "web3";
 const web3 = new Web3(new Web3.providers.HttpProvider(process.env.REACT_APP_infuraKey));
 const contractABI = require("../contract-abi.json");
-const contractAddress = "0x55c81889f270E2a5e06790d19DC7A6D5D19Fda94";
+const contractAddress = "0x1Ac4B55ba89c527284EbE2D164306259C68010b1";
 
 export const ChristmasLotteryContract = new web3.eth.Contract(
   contractABI,
@@ -52,7 +52,7 @@ export const getAllPartecipants = async (walletAddress) => {
       .call({ from: walletAddress });
     let partecipants = [];
     for (let i = 0; i < message.length; i++) {
-      partecipants.push(message[i][1] + " " + message[i][2]);
+      partecipants.push(message[i][1] + " " + message[i][2]+ " "+ message[i][3]);
     }
     if (partecipants.length === 0) {
       partecipants = "No participants yet!";
@@ -216,14 +216,14 @@ export const getCurrentWalletConnected = async () => {
     };
   }
 };
-export const sellTicket = async (walletAddress, Name, Surname, Ticket) => {
+export const sellTicket = async (walletAddress, Name, Surname,IdBuyer, Ticket) => {
   try {
     //set up transaction parameters
     const transactionParameters = {
       to: contractAddress, // Required except during contract publications.
       from: walletAddress, // must match user's active address.
       data: ChristmasLotteryContract.methods
-        .SellTicket(Name, Surname, Ticket)
+        .SellTicket(Name, Surname, IdBuyer, Ticket)
         .encodeABI(),
     };
     //sign the transaction
