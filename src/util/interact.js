@@ -1,7 +1,7 @@
 import Web3 from "web3";
 const web3 = new Web3(new Web3.providers.HttpProvider(process.env.REACT_APP_infuraKey));
 const contractABI = require("../contract-abi.json");
-const contractAddress = "0x1Ac4B55ba89c527284EbE2D164306259C68010b1";
+const contractAddress = "0xF01902e30Fad0927D9dda6532d4E5607c6255631";
 
 export const ChristmasLotteryContract = new web3.eth.Contract(
   contractABI,
